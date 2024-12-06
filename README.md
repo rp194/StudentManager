@@ -2,7 +2,7 @@
 
 ## Overview
 
-Student Manager is a Spring Boot-based application designed to manage student records efficiently. It provides features for adding, updating, deleting, and viewing student details along with the pagination, as well as finding the average age of students.
+Student Manager is a Spring Boot-based application designed to manage student records. It provides features for adding, updating, deleting, and viewing student details along with the pagination, as well as finding the average age of students.
 
 ### Technologies Used
 - Java
