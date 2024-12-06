@@ -85,7 +85,7 @@ Or another error like this:
     ![image](https://github.com/user-attachments/assets/f2f880a9-8646-4e1b-ae2e-886fc74f1dfe)
 8. Finally, for receiving a service of finding the average age of the students, you can request GET and add "/avgage" at the end of your url without passing any id. The result would be like this:
     ![image](https://github.com/user-attachments/assets/e23fc7b3-80a5-408c-a5c0-12c8213d2852)
-    Knowing that John Wick (Keanu Reeves) and Taylor Swift are born in 1964 and 1989 respectively, in 2024 they are 60 and 35 years old. So, their average age is 47.5, which is shown the same as a result of our request.
+    Knowing that John Wick (Keanu Reeves) and Taylor Swift were born in 1964 and 1989 respectively, in 2024 they are 60 and 35 years old. So, their average age is 47.5, which is shown the same as a result of our request.
 
 ## Important note
 If you wish to build this project from an IDE, I strongly recommend using VS Code, as IntelliJ might fail to interpret the Lombok configurations and usages. Other than using an IDE, you should be fine, having followed the above steps successfully.
