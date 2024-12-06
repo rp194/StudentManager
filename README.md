@@ -64,7 +64,7 @@ The application should now be accessible at http://localhost:8080.
    }
     ```
 
-4. By providing a valid student (for example id must be a 10-digit string consisting of mere numbers, and also birthYear must be an interger between 1900 and 2024), you must recieve a "201 Created" validation and a validation message on your user-end API, as bellow:
+4. By providing a valid student (for example id must be a 10-digit string consisting of mere numbers, and also birthYear must be an interger between 1900 and 2024) in your POST request, you must recieve a "201 Created" validation and a validation message on your user-end API, as bellow:
 
 ![image](https://github.com/user-attachments/assets/a445e1fa-c22c-44e4-8722-857be5867c16)
 
