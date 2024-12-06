@@ -1,8 +1,9 @@
 package com.MyDemo.StudentManager.layers.mappers.implementations;
 
-import com.MyDemo.StudentManager.layers.domain.Student;
-import com.MyDemo.StudentManager.layers.domain.dto.StudentDto;
 import com.MyDemo.StudentManager.layers.mappers.Mapper;
+import com.MyDemo.StudentManager.layers.model.Student;
+import com.MyDemo.StudentManager.layers.model.dto.StudentDto;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 

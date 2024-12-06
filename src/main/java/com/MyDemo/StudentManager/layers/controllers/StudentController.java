@@ -1,9 +1,9 @@
 package com.MyDemo.StudentManager.layers.controllers;
 
 import com.MyDemo.StudentManager.layers.Services.StudentService;
-import com.MyDemo.StudentManager.layers.domain.Student;
-import com.MyDemo.StudentManager.layers.domain.dto.StudentDto;
 import com.MyDemo.StudentManager.layers.mappers.Mapper;
+import com.MyDemo.StudentManager.layers.model.Student;
+import com.MyDemo.StudentManager.layers.model.dto.StudentDto;
 
 import jakarta.validation.Valid;
 
@@ -26,7 +26,7 @@ public class StudentController {
     public ResponseEntity<String> createStudent(@RequestBody @Valid StudentDto studentDto) {
         Student student = studentMapper.mapFrom(studentDto);
         studentService.saveStudent(student);
-        return new ResponseEntity<>("Student created successfully!", HttpStatus.CREATED);
+        return new ResponseEntity<>("Student is created successfully!", HttpStatus.CREATED);
     }
     @GetMapping(path = "/dbInteractions")
     public Page<StudentDto> showStudentList(Pageable pageable) {
@@ -43,21 +43,24 @@ public class StudentController {
         studentDto.setId(id);
         Student student = studentMapper.mapFrom(studentDto);
         studentService.saveStudent(student);
-        return new ResponseEntity<>("Student fully updated successfully!", HttpStatus.ACCEPTED);
+        return new ResponseEntity<>("Student is fully updated successfully!", HttpStatus.ACCEPTED);
     }
     @PatchMapping(path = "/dbInteractions/{id}")
-    public ResponseEntity<String> partialUpdate(@PathVariable("id") String id, @RequestBody @Valid StudentDto studentDto) {
+    public ResponseEntity<String> partialUpdate(@PathVariable("id") String id, @RequestBody StudentDto studentDto) {
         if(!studentService.contains(id)) {
             return new ResponseEntity<> (HttpStatus.NOT_FOUND);
         }
+        if (studentDto.getBirthYear() != null && (studentDto.getBirthYear() < 1900 || studentDto.getBirthYear() > 2024)) {
+            return new ResponseEntity<>("Birth year must be a 4-digit number between 1900 and 2024.", HttpStatus.BAD_REQUEST);
+        }
         Student student = studentMapper.mapFrom(studentDto);
         studentService.partialUpdate(id, student);
-        return new ResponseEntity<>("Student partially updated successfully!", HttpStatus.ACCEPTED);
+        return new ResponseEntity<>("Student is partially updated successfully!", HttpStatus.ACCEPTED);
     }
     @DeleteMapping(path = "/dbInteractions/{id}")
     public ResponseEntity<String> deleteStudent(@PathVariable("id") String id) {
         studentService.deleteStudent(id);
-        return new ResponseEntity<>("Student deleted successfully!", HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>("Student is deleted successfully!", HttpStatus.NO_CONTENT);
     }
     @GetMapping(path = "/dbInteractions/avgage")
     public ResponseEntity<String> averageAge() {

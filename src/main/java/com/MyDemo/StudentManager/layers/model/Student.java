@@ -1,4 +1,4 @@
-package com.MyDemo.StudentManager.layers.domain;
+package com.MyDemo.StudentManager.layers.model;
 
 
 import jakarta.persistence.*;

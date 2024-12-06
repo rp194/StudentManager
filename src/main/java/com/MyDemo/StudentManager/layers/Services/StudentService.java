@@ -1,9 +1,9 @@
 package com.MyDemo.StudentManager.layers.Services;
 
-import com.MyDemo.StudentManager.layers.domain.Student;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+
+import com.MyDemo.StudentManager.layers.model.Student;
 
 //@Service
 public interface StudentService {

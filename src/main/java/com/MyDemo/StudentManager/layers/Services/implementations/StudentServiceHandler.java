@@ -1,7 +1,7 @@
 package com.MyDemo.StudentManager.layers.Services.implementations;
 
 import com.MyDemo.StudentManager.layers.Services.StudentService;
-import com.MyDemo.StudentManager.layers.domain.Student;
+import com.MyDemo.StudentManager.layers.model.Student;
 import com.MyDemo.StudentManager.layers.repositories.StudentRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
