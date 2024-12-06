@@ -30,12 +30,13 @@ Student Manager is a Spring Boot-based application designed to manage student re
 2. Create a database in PostgreSQL (e.g., `student_manager`) using the configurations provided in the `docker-compose.yml` file
 3. Run this command in your terminal to set up the database
    ```bash
-       docker-compose up
+    docker-compose up
 5. Update the `src/main/resources/application.properties` with your database credentials:
    ```properties
-   spring.datasource.url=jdbc:mysql://localhost:3306/student_manager
-   spring.datasource.username=your_username
-   spring.datasource.password=your_password
+   spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
+   spring.datasource.username=your_chosen_username
+   spring.datasource.password=your_chosen_password
+   spring.datasource.driver-class-name=org.postgresql.Driver
    spring.jpa.hibernate.ddl-auto=update
    ```
 ## Build the project:
