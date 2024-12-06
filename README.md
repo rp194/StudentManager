@@ -40,17 +40,17 @@ Student Manager is a Spring Boot-based application designed to manage student re
    ```
 ## Build the project:
 ```bash
-    mvn clean install
+ mvn clean install
 ```
 ## Run the application:
 ```bash
-    mvn spring-boot:run
+ mvn spring-boot:run
 ```
 The application should now be accessible at http://localhost:8080.
 ## Usage
 1. Access the application via an API platform such as the "Postman" software and try to access this address in each section :
    ```bash
-       http://localhost:8080:dbInteractions
+    http://localhost:8080:dbInteractions
    ```
 2. Navigate through different sections such as "POST", "GET", "PUT", etc.
 3. Provide correct fields for a student(firstName(String), lastName(String), id(String), birthYear(Long)) as a JSON object of your request body to create a student entity inside the database. You can follow the format below:
